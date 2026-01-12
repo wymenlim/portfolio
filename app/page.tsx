@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 import {
-  AboutSection,
+  EduSection,
   ProjectsSection,
   ExpSection,
   ContactSection,
@@ -19,7 +19,7 @@ export default function Home() {
           
         </div>
       </section>
-      <AboutSection></AboutSection>
+      <EduSection></EduSection>
       <ProjectsSection></ProjectsSection>
       <ExpSection></ExpSection>
       <ContactSection></ContactSection>

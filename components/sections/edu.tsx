@@ -13,7 +13,7 @@ export default function EduSection()
                           Education
                         </h1>
                         <div className="flex flex-col items-center justify-center">
-                          <div className="flex flex-col items-start gap-4">
+                          <div className="flex flex-col items-start gap-10">
                             <Card>
                               <div className="flex flex-row gap-6">
                                 <Image
@@ -29,11 +29,11 @@ export default function EduSection()
                               </div>
                             </Card>
                             <Card>
-                              <div className="flex flex-row gap-6 pr-7">
+                              <div className="flex flex-row gap-6 pr-10">
                                 <Image
                                   src = "/uog.png"
                                   alt="UOG logo"
-                                  width={200}
+                                  width={190}
                                   height={100}
                                   />
                                 <div className="mt-2">
