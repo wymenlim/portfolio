@@ -19,7 +19,7 @@ export default function NavBar()
                 Home
               </a>
               <a href="#about" className="hover:text-white transition">
-                About Me
+                Education
               </a>
               <a href="#projects" className="hover:text-white transition">
                 Projects
