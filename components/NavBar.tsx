@@ -13,9 +13,6 @@ export default function NavBar()
           z-50
         ">
           <div className="flex items-center justify-center">
-            {/* <span className="text-white font-semibold text-lg">
-              Pages
-            </span> */}
     
             <div className="flex gap-10 text-white/70 font-bold">
               <a href="#home" className="hover:text-white transition">
