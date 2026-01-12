@@ -1,8 +1,80 @@
+"use client"
 import Card from "../Card"
 import Image from "next/image";
+import { useIsMobile } from "../ismobile";
 
 export default function EduSection()
 {
+  const isMobile = useIsMobile()
+  if (isMobile)
+  {
+    return (
+        <section id="about" className="min-h-screen bg-zinc-500">
+                <div className="px-10 py-10">
+                    <div>
+                    
+                        <h1 className="flex gap-4 mt-8 font-bold text-2xl md:text-6xl mb-15">
+                          <span className="inline-block w-1 h-13 bg-white rounded-full"></span>
+                          Education
+                        </h1>
+                        <div className="flex flex-col items-center justify-center">
+                          <div className="flex flex-col items-start gap-10">
+                            <Card>
+                              <div className="flex flex-row gap-6">
+                                <Image
+                                  src = "/sit.png"
+                                  alt="SIT logo"
+                                  width={150}
+                                  height={150}
+                                  className="h-10 w-auto mt-3"
+                                  />
+                                <div>
+                                  <p className="text-sm font-bold">Singapore Institute of Technology</p>
+                                  <p className=" font-bold text-xs">Bachelor in Computing Science</p>
+                                </div>
+                              </div>
+                            </Card>
+                            <Card>
+                              <div className="flex flex-row gap-6 pr-10">
+                                <Image
+                                  src = "/uog.png"
+                                  alt="UOG logo"
+                                  width={100}
+                                  height={100}
+                                  className="h-6 w-auto mt-3"
+                                  />
+                                <div>
+                                  <p className="text-sm font-bold">University of Glasgow</p>
+                                  <p className=" font-bold text-xs">Bachelor in Computing Science</p>
+                                </div>
+                              </div>
+                            </Card>
+                            <Card>
+                              <div className="flex flex-row gap-6">
+                                <Image
+                                  src = "/tp.png"
+                                  alt="TP logo"
+                                  width={100}
+                                  height={100}
+                                  className="h-11 w-auto"
+                                  />
+                                <div>
+                                  <p className="text-sm font-bold">Temasek Polytechnic</p>
+                                  <p className=" font-bold text-xs">Diploma in Accounting and Finance</p>
+                                </div>
+                              </div>
+                            </Card>
+                          </div>
+                          
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+              </section>
+    )
+  }
+
     return (
         <section id="about" className="min-h-screen bg-zinc-500">
                 <div className="px-10 py-10">

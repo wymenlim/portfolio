@@ -1,17 +1,11 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { useIsMobile } from "./ismobile"
 
 export default function NavBar()
 {
-  const [isMobile, setIsMobile] = useState(false)
+  const isMobile =useIsMobile()
   const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 768)
-    checkScreen()
-    window.addEventListener("resize", checkScreen)
-    return () => window.removeEventListener("resize", checkScreen)
-  }, [])
 
    if (isMobile && !open) {
     return (
@@ -36,18 +30,19 @@ export default function NavBar()
   else if (isMobile)
   {
     return (
-    <div className="fixed inset-0 z-50 bg-transparent backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 bg-transparent">
       <div
         className="
           absolute top-0 right-0
           h-full w-64
-          bg-white/20 backdrop-blur-md
+          bg-transparent backdrop-blur-sm
           p-6
-          shadow-xl
+          shadow-2xl
+          rounded-3xl
         "
       >
         <div className="flex justify-between items-center mb-8">
-          <span className="text-white font-bold text-lg">Menu</span>
+          <span className="text-white font-bold text-lg"></span>
           <button
             onClick={() => setOpen(false)}
             className="text-white text-xl"
@@ -56,7 +51,7 @@ export default function NavBar()
           </button>
         </div>
 
-        <nav className="flex flex-col gap-6 text-white font-semibold">
+        <nav className="flex flex-col gap-6 text-white font-semibold ">
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
           <a href="#about" onClick={() => setOpen(false)}>Education</a>
           <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
