@@ -12,7 +12,7 @@ export default function NavBar()
       <button
         onClick={() => setOpen(true)}
         className="
-          fixed top-4 right-4
+          fixed bottom-4 right-4
           z-50
           rounded-lg
           bg-white/20 backdrop-blur-md
@@ -53,10 +53,10 @@ export default function NavBar()
 
         <nav className="flex flex-col gap-6 text-white font-semibold ">
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setOpen(false)}>Education</a>
-          <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
-          <a href="#experience" onClick={() => setOpen(false)}>Experience</a>
-          <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+          <a href="#1" onClick={() => setOpen(false)}>Dont say Bojio</a>
+          <a href="#2" onClick={() => setOpen(false)}>Flight Path Visualisation</a>
+          <a href="#3" onClick={() => setOpen(false)}>Smart Waste Management</a>
+          <a href="#4" onClick={() => setOpen(false)}>Gamified Feedback App</a>
         </nav>
       </div>
     </div>
@@ -66,33 +66,34 @@ export default function NavBar()
     return (
         <nav className="
           fixed bottom-20 left-1/2 -translate-x-1/2
-          inline-flex
           rounded-2xl
           backdrop-blur-md bg-white/15
           border border-white/20
           shadow-lg
-          px-20 py-3
+          px-4 py-3
+          w-[90vw] max-w-[1050px]
+          overflow-hidden
           z-50
         ">
           <div className="flex items-center justify-center">
-    
-            <div className="flex text-white/70 font-bold gap-10">
+            <div className="flex w-full text-white/70 font-bold gap-10 overflow-x-auto whitespace-nowrap px-2 no-scrollbar">
               <a href="#home" className="hover:text-white transition">
                 Home
               </a>
-              <a href="#about" className="hover:text-white transition">
-                Education
+              <a href="#1" className="hover:text-white transition">
+                Dont Say Bojio
               </a>
-              <a href="#projects" className="hover:text-white transition">
-                Projects
+              <a href="#2" className="hover:text-white transition">
+                Flight Path Visualisation
               </a>
-               <a href="#experience" className="hover:text-white transition">
-                Experiences
+               <a href="#3" className="hover:text-white transition">
+                Smart Waste Management
               </a>
-              <a href="#contact" className="hover:text-white transition">
-                Contact Me
+              <a href="#4" className="hover:text-white transition">
+                Gamified Feedback App
               </a>
               
+             
             </div>
           </div>
         </nav>

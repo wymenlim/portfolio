@@ -9,8 +9,8 @@ export default function EduSection()
   if (isMobile)
   {
     return (
-        <section id="about" className="min-h-screen bg-zinc-500">
-                <div className="px-10 py-10">
+        <section id="about" className="min-h-screen bg-black/60">
+                <div className="px-10 py-20">
                     <div>
                     
                         <h1 className="flex gap-4 mt-8 font-bold text-2xl md:text-6xl mb-15">
