@@ -8,17 +8,23 @@ export default function ContactSection()
             <div className="px-10 py-20">
                 <div>
                     <h1 className="mt-8 font-bold text-2xl md:text-5xl">Smart Waste Management</h1>
-                    <h2 className="mt-2">This is a webapp the help elderly connect with each other through signing up for events</h2>
+                    <h2 className="mt-2">Developed an IoT-enabled smart waste bin using Raspberry Pi and multiple sensors,  </h2>
+                    <h2>featuring contactless operation, overflow detection, real-time status monitoring, and MQTT-based device communication.</h2>
                     <div className ="flex gap-1 mt-2">
                         <Tag>Embedded Systems</Tag>
                         <Tag>Internet of Things</Tag>
                         <Tag>Networking</Tag>
                         <Tag>MQTT</Tag>
                     </div>
-                    <p className="mt-4">Description goes here</p>
                     <div className="flex items-center justify-center">
                         <div className="flex h-150 w-225 mt-10">
-                            <ImageCarouselUploader images={["/black-bg.jpg", "/uog.png", "/sit.png"]} />
+                            <ImageCarouselUploader images={["/bin-1.jpeg", "/bin-2.jpeg", "/bin-3.jpeg"]}
+                            captions={[
+                            "Infographic that gives a brief overview of the project ",
+                            "Visual representation of the project arhitecture",
+                            "Admin dashboard that shows the status of the bin",
+                          ]} 
+                          />
                         </div>
                     </div>
                     

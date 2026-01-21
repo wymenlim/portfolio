@@ -17,10 +17,18 @@ export default function ProjectsSection()
                     <Tag>AWS</Tag>
                     <Tag>PostgreSQL</Tag>
                 </div>
-                <p className="mt-4">Description goes here</p>
                 <div className="flex items-center justify-center">
                     <div className="flex h-150 w-225 mt-10">
-                        <ImageCarouselUploader images={["/black-bg.jpg", "/uog.png", "/sit.png"]} />
+                        <ImageCarouselUploader
+                          images={["/cloud-home.png", "/cloud-swipe.png", "/cloud-event.png","/cloud-create.png","/cloud-chat.png"]}
+                          captions={[
+                            "Home page for users",
+                            "Swipe deck for users to indicate interest for events",
+                            "Page that lists all events that the user is interested in",
+                            "Page that allows organisations to upload events",
+                            "Chatbot feature that allows communication between organiser and participants"
+                          ]}
+                        />
                     </div>
                 </div>
                 
