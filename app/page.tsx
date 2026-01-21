@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <Header name="Wymen Lim" title="Computer Science Student"email="wymenlsr@gmail.com"
-  linkedinUrl="https://www.linkedin.com/in/wymen-lim-431542217" resumeUrl="/resume.pdf"></Header>
+  linkedinUrl="https://www.linkedin.com/in/wymen-lim-431542217" resumeUrl="/Resume.pdf"></Header>
       <NavBar></NavBar>
       <section id="home" className="min-h-screen bg-[#0B1220]">
         <div className="flex items-center justify-center md:grid place-items-center min-h-screen">
