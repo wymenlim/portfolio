@@ -81,15 +81,18 @@ export default function NavBar()
                 Home
               </a>
               <a href="#1" className="hover:text-white transition">
-                Dont Say Bojio
+                Food For Thought 
               </a>
               <a href="#2" className="hover:text-white transition">
+                Dont Say Bojio
+              </a>
+              <a href="#3" className="hover:text-white transition">
                 Flight Path Visualisation
               </a>
-               <a href="#3" className="hover:text-white transition">
+               <a href="#4" className="hover:text-white transition">
                 Smart Waste Management
               </a>
-              <a href="#4" className="hover:text-white transition">
+              <a href="#5" className="hover:text-white transition">
                 Gamified Feedback App
               </a>
               

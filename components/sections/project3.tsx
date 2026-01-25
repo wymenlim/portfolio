@@ -4,7 +4,7 @@ import ImageCarouselUploader from "@/components/image";
 export default function ContactSection()
 {
     return(
-            <section id="3" className="min-h-screen bg-[#0B1220] ">
+            <section id="4" className="min-h-screen bg-[#0B1220] ">
             <div className="px-10 py-20">
                 <div>
                     <h1 className="mt-8 font-bold text-2xl md:text-5xl">Smart Waste Management</h1>

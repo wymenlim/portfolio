@@ -4,7 +4,7 @@ import ImageCarouselUploader from "@/components/image";
 export default function ExpSection()
 {
     return(
-            <section id="2" className="min-h-screen bg-[#1E1E1E] ">
+            <section id="3" className="min-h-screen bg-[#1E1E1E] ">
             <div className="px-10 py-20">
                 <div>
                     <h1 className="mt-8 font-bold text-2xl md:text-5xl">Flight Path Visualisation Web App</h1>

@@ -4,7 +4,7 @@ import ImageCarouselUploader from "@/components/image";
 export default function ProjectsSection()
 {
     return(
-        <section id="1" className="min-h-screen bg-[#0B1220] ">
+        <section id="2" className="min-h-screen bg-[#0B1220] ">
         <div className="px-10 py-20">
             <div>
                 <h1 className="mt-8 font-bold text-2xl md:text-5xl">Dont Say Bojio</h1>

@@ -6,6 +6,7 @@ import {
   ExpSection,
   ContactSection,
   Project4,
+  Project5,
 } from "@/components/sections";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           
         </div>
       </section>
+      <Project5></Project5>
       <ProjectsSection></ProjectsSection>
       <ExpSection></ExpSection>
       <ContactSection></ContactSection>
