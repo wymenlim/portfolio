@@ -8,12 +8,13 @@ export default function Project5()
             <div className="px-10 py-20">
                 <div>
                     <h1 className="mt-8 font-bold text-2xl md:text-5xl">Food For Thought</h1>
-                    <h2 className="mt-2">This app is an ongoing project with Singapore Cancer Society to increase the feedback quality and completion rate </h2>
+                    <h2 className="mt-2">Food for Thought is an AI-powered app that helps households reduce food waste by tracking groceries, predicting expiry dates,</h2>
+                    <h2>and suggesting recipes with exact serving sizes based on what you already have.</h2>
+                    <h2>Simply snap a photo of your groceries and get smart reminders before food expires — saving money while protecting the planet, one meal at a time.</h2>
                     <div className ="flex gap-1 mt-2">
-                        <Tag>Professional Software Development</Tag>
-                        <Tag>Next.JS</Tag>
-                        <Tag>Supabase</Tag>
-                        <Tag>Agile Scrum Methodology</Tag>
+                        <Tag>OpenAI</Tag>
+                        <Tag>SEALion LLM</Tag>
+                        <Tag>Hackathon</Tag>
                     </div>
                     <div className="flex items-center justify-center">
                         <div className="flex h-150 w-225 mt-10">
