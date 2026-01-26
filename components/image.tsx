@@ -12,6 +12,7 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
   const [index, setIndex] = useState(0);
   const currentImage = images[index];
   const isGif = currentImage.toLowerCase().endsWith(".gif");
+  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(currentImage);
 
   function next() {
     setIndex((i) => (i + 1) % images.length);
@@ -38,7 +39,16 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
         </button>
 
         <div className="relative h-full w-full max-w-4xl">
-          {isGif ? (
+          {isVideo ? (
+            <video
+              src={currentImage}
+              className="h-full w-full object-contain"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label={`Video ${index + 1}`}
+            />
+          ) : isGif ? (
             <img
               src={currentImage}
               alt={`Image ${index + 1}`}

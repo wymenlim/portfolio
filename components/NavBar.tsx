@@ -53,10 +53,11 @@ export default function NavBar()
 
         <nav className="flex flex-col gap-6 text-white font-semibold ">
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
-          <a href="#1" onClick={() => setOpen(false)}>Dont say Bojio</a>
-          <a href="#2" onClick={() => setOpen(false)}>Flight Path Visualisation</a>
-          <a href="#3" onClick={() => setOpen(false)}>Smart Waste Management</a>
-          <a href="#4" onClick={() => setOpen(false)}>Gamified Feedback App</a>
+          <a href="#1" onClick={() => setOpen(false)}>Food For Thought</a>
+          <a href="#2" onClick={() => setOpen(false)}>Dont say Bojio</a>
+          <a href="#3" onClick={() => setOpen(false)}>Flight Path Visualisation</a>
+          <a href="#4" onClick={() => setOpen(false)}>Smart Waste Management</a>
+          <a href="#5" onClick={() => setOpen(false)}>Gamified Feedback App</a>
         </nav>
       </div>
     </div>
