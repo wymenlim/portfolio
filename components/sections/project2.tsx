@@ -15,10 +15,10 @@ export default function ExpSection()
                         <Tag>Python</Tag>
                         <Tag>Data Structures</Tag>
                         <Tag>Algorithms</Tag>
-                        <Tag>Dynamic Programming</Tag>
                     </div>
+                    <div className ="flex gap-1 mt-2"><Tag>Dynamic Programming</Tag></div>
                     <div className="flex items-center justify-center">
-                        <div className="flex h-150 w-225 mt-10">
+                        <div className="flex h-150 w-225 mt-6">
                             <ImageCarouselUploader images={["/flight-1.jpeg", "/flight-2.jpeg", "/flight-3.jpeg", "/flight4.jpeg"]} />
                         </div>
                     </div>

@@ -14,11 +14,14 @@ export default function ProjectsSection()
                     <Tag>Docker</Tag>
                     <Tag>Docker compose</Tag>
                     <Tag>Python Flask</Tag>
+                </div>
+                <div className ="flex gap-1 mt-2">
                     <Tag>AWS</Tag>
                     <Tag>PostgreSQL</Tag>
                 </div>
+                
                 <div className="flex items-center justify-center">
-                    <div className="flex h-150 w-225 mt-10">
+                    <div className="flex h-150 w-225 mt-6">
                         <ImageCarouselUploader
                           images={["/cloud-home.png", "/cloud-swipe.png", "/cloud-event.png","/cloud-create.png","/cloud-chat.png"]}
                           captions={[

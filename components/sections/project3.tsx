@@ -12,12 +12,14 @@ export default function ContactSection()
                     <h2>featuring contactless operation, overflow detection, real-time status monitoring, and MQTT-based device communication.</h2>
                     <div className ="flex gap-1 mt-2">
                         <Tag>Embedded Systems</Tag>
+                    </div>
+                    <div className ="flex gap-1 mt-2">
                         <Tag>Internet of Things</Tag>
                         <Tag>Networking</Tag>
                         <Tag>MQTT</Tag>
                     </div>
                     <div className="flex items-center justify-center">
-                        <div className="flex h-150 w-225 mt-10">
+                        <div className="flex h-150 w-225 mt-6">
                             <ImageCarouselUploader images={["/bin-1.jpeg", "/bin-2.jpeg", "/bin-3.jpeg"]}
                             captions={[
                             "Infographic that gives a brief overview of the project ",
