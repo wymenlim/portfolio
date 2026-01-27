@@ -5,7 +5,7 @@ import { Code2, Terminal } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[70vh] flex items-center justify-center px-6 py-20">
+    <section id="0" className="min-h-[70vh] flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Left - Text Content */}
         <motion.div

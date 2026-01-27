@@ -52,7 +52,7 @@ export default function NavBar()
         </div>
 
         <nav className="flex flex-col gap-6 text-white font-semibold ">
-          <a href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#0" onClick={() => setOpen(false)}>Home</a>
           <a href="#1" onClick={() => setOpen(false)}>Food For Thought</a>
           <a href="#2" onClick={() => setOpen(false)}>Dont say Bojio</a>
           <a href="#3" onClick={() => setOpen(false)}>Flight Path Visualisation</a>
@@ -78,7 +78,7 @@ export default function NavBar()
         ">
           <div className="flex items-center justify-center">
             <div className="flex w-full text-white/70 font-bold gap-10 overflow-x-auto whitespace-nowrap px-2 no-scrollbar">
-              <a href="#home" className="hover:text-white transition">
+              <a href="#0" className="hover:text-white transition">
                 Home
               </a>
               <a href="#1" className="hover:text-white transition">
