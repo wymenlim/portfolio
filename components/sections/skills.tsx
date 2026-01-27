@@ -164,32 +164,6 @@ const SkillsSection = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Tech Stack Tags */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wider">
-            Technologies I work with
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "Docker", "AWS", "Git"].map(
-              (tech) => (
-                <motion.span
-                  key={tech}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium text-slate-900 dark:text-white transition-colors hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 hover:border-transparent cursor-default"
-                >
-                  {tech}
-                </motion.span>
-              )
-            )}
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );
