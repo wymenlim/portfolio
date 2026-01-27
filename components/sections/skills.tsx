@@ -1,15 +1,18 @@
 // SkillsSection.tsx
 // Dependencies: framer-motion, lucide-react, tailwindcss
 // Install: npm install framer-motion lucide-react
+
 "use client";
 
 import { motion } from "framer-motion";
-import { Server, Wrench, Globe, Palette } from "lucide-react";
+import { Code2, Wrench, Globe, Palette } from "lucide-react";
 import { ReactNode } from "react";
+
+type FamiliarityLevel = "comfortable" | "familiar" | "learning";
 
 interface Skill {
   name: string;
-  level: number;
+  familiarity: FamiliarityLevel;
 }
 
 interface SkillCategory {
@@ -18,45 +21,55 @@ interface SkillCategory {
   skills: Skill[];
 }
 
+const familiarityConfig: Record<FamiliarityLevel, { label: string; width: string }> = {
+  comfortable: { label: "Comfortable", width: "100%" },
+  familiar: { label: "Familiar", width: "70%" },
+  learning: { label: "Learning", width: "40%" },
+};
+
 const skillCategories: SkillCategory[] = [
+    {
+    title: "Languages",
+    icon: <Code2 className="w-5 h-5" />,
+    skills: [
+      { name: "Java", familiarity: "comfortable" },
+      { name: "Python", familiarity: "comfortable" },
+      { name: "C", familiarity: "familiar" },
+      { name: "Rust", familiarity: "learning" },
+      { name: "Kotlin", familiarity: "learning" },
+      { name: "SQL", familiarity: "comfortable" },
+    ],
+  },
   {
     title: "Frontend",
     icon: <Globe className="w-5 h-5" />,
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "Vue.js", level: 75 },
+      { name: "Next.js", familiarity: "comfortable" },
+      { name: "JavaScript / TypeScript", familiarity: "familiar" },
+      { name: "Tailwind CSS", familiarity: "comfortable" },
+      { name: "Jetpack Compose - Android", familiarity: "learning" },
     ],
   },
+
   {
-    title: "Backend",
-    icon: <Server className="w-5 h-5" />,
-    skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "GraphQL", level: 78 },
-    ],
-  },
-  {
-    title: "Tools & DevOps",
+    title: "Tools",
     icon: <Wrench className="w-5 h-5" />,
     skills: [
-      { name: "Git / GitHub", level: 94 },
-      { name: "Docker", level: 80 },
-      { name: "AWS / Cloud", level: 75 },
-      { name: "CI/CD", level: 82 },
+      { name: "Git / GitHub", familiarity: "comfortable" },
+      { name: "Docker", familiarity: "familiar" },
+       {name: "Kubernetes", familiarity: "learning" },
+      { name: "AWS (Basic Deployment)", familiarity: "learning" },
+      { name: "PostgreSQL", familiarity: "comfortable" },
     ],
   },
   {
     title: "Other Skills",
     icon: <Palette className="w-5 h-5" />,
     skills: [
-      { name: "UI/UX Design", level: 78 },
-      { name: "Agile / Scrum", level: 85 },
-      { name: "Testing", level: 80 },
-      { name: "Technical Writing", level: 72 },
+      { name: "Accounting & Finance (Diploma)", familiarity: "familiar" },
+      { name: "Agile / Scrum", familiarity: "familiar" },
+      { name: "Internet of Things", familiarity: "learning" },
+      { name: "Networking", familiarity: "familiar" },
     ],
   },
 ];
@@ -80,7 +93,7 @@ const cardVariants = {
 
 const SkillsSection = () => {
   return (
-    <section className="py-20 px-6 bg-slate-50 min-h-screen dark:bg-slate-900/50">
+    <section className="py-20 px-6 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -88,13 +101,13 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Skills & Expertise
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            A comprehensive toolkit built over years of crafting digital solutions.
+            Skillset acquired from my different projects. <br />
             Always learning, always improving.
           </p>
         </motion.div>
@@ -121,28 +134,31 @@ const SkillsSection = () => {
                 </div>
                 {/* Card Content */}
                 <div className="p-6 pt-0 space-y-4">
-                  {category.skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-slate-900 dark:text-white font-medium">
-                          {skill.name}
-                        </span>
-                        <span className="text-slate-500 dark:text-slate-400">
-                          {skill.level}%
-                        </span>
+                  {category.skills.map((skill) => {
+                    const config = familiarityConfig[skill.familiarity];
+                    return (
+                      <div key={skill.name} className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-slate-900 dark:text-white font-medium">
+                            {skill.name}
+                          </span>
+                          <span className="text-slate-500 dark:text-slate-400 text-xs">
+                            {config.label}
+                          </span>
+                        </div>
+                        {/* Progress Bar */}
+                        <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: config.width }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="h-full bg-slate-900 dark:bg-white rounded-full"
+                          />
+                        </div>
                       </div>
-                      {/* Progress Bar */}
-                      <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, ease: "easeOut" }}
-                          className="h-full bg-slate-900 dark:bg-white rounded-full"
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
@@ -150,7 +166,7 @@ const SkillsSection = () => {
         </motion.div>
 
         {/* Tech Stack Tags */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -173,7 +189,7 @@ const SkillsSection = () => {
               )
             )}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

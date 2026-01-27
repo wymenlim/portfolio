@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ExpSection()
 {
     return(
-            <section id="3" className="min-h-screen bg-[#1E1E1E] ">
+            <section id="3" className="min-h-[70vh] bg-black ">
             <div className="px-10 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

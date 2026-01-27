@@ -8,12 +8,13 @@ import {
   Project4,
   Project5,
   Skills,
+  Hero,
 } from "@/components/sections";
 
 export default function Home() {
   return (
     <main>
-      <Header name="Wymen Lim" title="Computer Science Student"email="wymenlsr@gmail.com"
+      {/* <Header name="Wymen Lim" title="Computer Science Student"email="wymenlsr@gmail.com"
   linkedinUrl="https://www.linkedin.com/in/wymen-lim-431542217" resumeUrl="/Resume.pdf"></Header>
       <NavBar></NavBar>
       <div id="home">
@@ -39,7 +40,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
+      <Header name="Wymen Lim" title="Computer Science Student"email="wymenlsr@gmail.com"
+  linkedinUrl="https://www.linkedin.com/in/wymen-lim-431542217" resumeUrl="/Resume.pdf"></Header>
+      <NavBar></NavBar>
+      <Hero />
       <Skills />
       <Project5></Project5>
       <ProjectsSection></ProjectsSection>

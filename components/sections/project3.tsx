@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ContactSection()
 {
     return(
-            <section id="4" className="min-h-screen bg-[#0B1220] ">
+            <section id="4" className="min-h-[70vh] bg-slate-900/50 ">
             <div className="px-10 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
