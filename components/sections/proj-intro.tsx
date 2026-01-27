@@ -54,8 +54,7 @@ const ProjectsSection = () => {
             Projects
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects I've worked on, showcasing my skills in
-            building scalable and user-friendly applications.
+            A selection of projects I've worked on, showcasing my skills across different technical areas.
           </p>
         </motion.div>
 
