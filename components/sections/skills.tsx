@@ -103,10 +103,10 @@ const SkillsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-5"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Skillset acquired from my different projects. <br />
             Always learning, always improving.
           </p>
@@ -122,11 +122,11 @@ const SkillsSection = () => {
         >
           {skillCategories.map((category) => (
             <motion.div key={category.title} variants={cardVariants}>
-              <div className="h-full bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="h-full bg-slate-800 rounded-lg border border-slate-700 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 {/* Card Header */}
                 <div className="p-6 pb-4">
-                  <h3 className="flex items-center gap-3 text-lg font-semibold text-slate-900 dark:text-white">
-                    <span className="p-2 bg-slate-900/10 dark:bg-white/10 rounded-lg text-slate-900 dark:text-white">
+                  <h3 className="flex items-center gap-3 text-lg font-semibold text-white">
+                    <span className="p-2 bg-white/10 rounded-lg text-white">
                       {category.icon}
                     </span>
                     {category.title}
@@ -139,21 +139,21 @@ const SkillsSection = () => {
                     return (
                       <div key={skill.name} className="space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span className="text-slate-900 dark:text-white font-medium">
+                          <span className="text-white font-medium">
                             {skill.name}
                           </span>
-                          <span className="text-slate-500 dark:text-slate-400 text-xs">
+                          <span className="ttext-slate-400 text-xs">
                             {config.label}
                           </span>
                         </div>
                         {/* Progress Bar */}
-                        <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+                        <div className="h-2 w-full overflow-hidden rounded-full bg-slate-700">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: config.width }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="h-full bg-slate-900 dark:bg-white rounded-full"
+                            className="h-full bg-white rounded-full"
                           />
                         </div>
                       </div>

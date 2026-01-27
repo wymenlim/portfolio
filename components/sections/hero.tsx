@@ -27,7 +27,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold text-white dark:text-white leading-tight"
+              className="text-5xl md:text-6xl font-bold text-white leading-tight"
             >
               Wymen Lim
             </motion.h1>
@@ -37,7 +37,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-md"
+            className="text-lg text-gray-400 leading-relaxed max-w-md"
           >
             Learning to build meaningful digital experiences through exploration and problem solving.
             A Computer Science student excited to pick up new technologies and grow with every project.
@@ -64,26 +64,26 @@ const HeroSection = () => {
           <div className="relative w-72 h-72">
             {/* Background decorative elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-emerald-500/10 rounded-3xl rotate-6" />
-            <div className="absolute inset-0 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl shadow-lg flex items-center justify-center">
+            <div className="absolute inset-0 bg-gray-900 border border-gray-800 rounded-3xl shadow-lg flex items-center justify-center">
               <div className="space-y-4 text-center">
                 <div className="flex justify-center gap-4">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl"
+                    className="p-4 bg-gray-800 rounded-xl"
                   >
                     <Code2 className="w-8 h-8 text-emerald-500" />
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: -5 }}
-                    className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl"
+                    className="p-4 bg-gray-800 rounded-xl"
                   >
                     <Terminal className="w-8 h-8 text-emerald-500" />
                   </motion.div>
                 </div>
                 <div className="space-y-2 px-6">
-                  <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full w-full" />
-                  <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full w-3/4 mx-auto" />
-                  <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full w-1/2 mx-auto" />
+                  <div className="h-2 bg-gray-800 rounded-full w-full" />
+                  <div className="h-2 bg-gray-800 rounded-full w-3/4 mx-auto" />
+                  <div className="h-2 bg-gray-800 rounded-full w-1/2 mx-auto" />
                 </div>
               </div>
             </div>
