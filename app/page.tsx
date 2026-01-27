@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import NavBar from "@/components/NavBar";
 import {
-  EduSection,
   ProjectsSection,
   ExpSection,
   ContactSection,
@@ -9,6 +8,7 @@ import {
   Project5,
   Skills,
   Hero,
+  ProjIntro,
 } from "@/components/sections";
 
 export default function Home() {
@@ -46,6 +46,7 @@ export default function Home() {
       <NavBar></NavBar>
       <Hero />
       <Skills />
+      <ProjIntro />
       <Project5></Project5>
       <ProjectsSection></ProjectsSection>
       <ExpSection></ExpSection>
