@@ -36,7 +36,7 @@ export default function Project4()
                     className="flex items-center justify-center"
                 >
                     <div className="flex h-150 w-225 mt-8">
-                        <ImageCarouselUploader images={["/game-story.jpeg", "/game-tasks.jpeg", "/game-feedback.jpeg"]}
+                        <ImageCarouselUploader images={["/game-story.png", "/game-tasks.jpeg", "/game-feedback.jpeg"]}
                         captions={[
                         "Preview of the story",
                         "Example of tasks that users would have to complete before attempting the feedback form",
