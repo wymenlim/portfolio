@@ -44,9 +44,9 @@ const skillCategories: SkillCategory[] = [
     title: "Frontend",
     icon: <Globe className="w-5 h-5" />,
     skills: [
-      { name: "Next.js", familiarity: "comfortable" },
+      { name: "Next.js", familiarity: "familiar" },
       { name: "JavaScript / TypeScript", familiarity: "familiar" },
-      { name: "Tailwind CSS", familiarity: "comfortable" },
+      { name: "Tailwind CSS", familiarity: "familiar" },
       { name: "Jetpack Compose - Android", familiarity: "learning" },
     ],
   },
