@@ -41,13 +41,15 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Frontend",
+    title: "Machine Learning & Data",
     icon: <Globe className="w-5 h-5" />,
     skills: [
-      { name: "Next.js", familiarity: "familiar" },
-      { name: "JavaScript / TypeScript", familiarity: "familiar" },
-      { name: "Tailwind CSS", familiarity: "familiar" },
-      { name: "Jetpack Compose - Android", familiarity: "learning" },
+      { name: "Machine Learning (Scikit-learn)", familiarity: "learning" },
+      { name: "Data Preprocessing", familiarity: "familiar" },
+      { name: "Pandas & NumPy", familiarity: "familiar" },
+      { name: "Retrieval-Augmented Generation (RAG)", familiarity: "learning" },
+      { name: "Model Evaluation", familiarity: "learning" },
+      { name: "Data Analytics", familiarity: "learning" },
     ],
   },
 

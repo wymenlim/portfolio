@@ -39,8 +39,8 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg text-gray-400 leading-relaxed max-w-md"
           >
-            Learning to build meaningful digital experiences through exploration and problem solving.
-            A Computer Science student excited to pick up new technologies and grow with every project.
+            Learning to build intelligent and meaningful digital solutions through exploration and problem solving.
+            A Computer Science student with a growing interest in AI and data-driven systems, excited to explore emerging technologies and improve with every project.
           </motion.p>
 
           <motion.div
