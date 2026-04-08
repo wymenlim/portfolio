@@ -9,7 +9,9 @@ import {
   Skills,
   Hero,
   ProjIntro,
+  Project6
 } from "@/components/sections";
+
 
 export default function Home() {
   return (
@@ -25,6 +27,7 @@ export default function Home() {
       <ExpSection></ExpSection>
       <ContactSection></ContactSection>
       <Project4></Project4>
+      <Project6></Project6>
       
     </main>
     

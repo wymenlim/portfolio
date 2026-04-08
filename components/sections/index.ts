@@ -7,4 +7,5 @@ export { default as Project5 } from "./project5";
 export {default as Skills} from "./skills";
 export {default as Hero} from "./hero";
 export {default as ProjIntro} from "./proj-intro";
+export {default as Project6} from "./project6";
 
