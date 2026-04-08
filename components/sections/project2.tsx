@@ -1,6 +1,7 @@
 "use client";
 import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
+import BackToProjects from "@/components/back-to-projects";
 import { motion } from "framer-motion";
 
 export default function ExpSection()
@@ -36,7 +37,7 @@ export default function ExpSection()
                         <ImageCarouselUploader images={["/flight-1.jpeg", "/flight-2.jpeg", "/flight-3.jpeg", "/flight4.jpeg"]} />
                     </div>
                 </motion.div>
-                
+                <BackToProjects />
             </div>
           </section>
         )

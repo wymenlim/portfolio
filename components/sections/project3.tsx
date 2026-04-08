@@ -1,6 +1,7 @@
 "use client";
 import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
+import BackToProjects from "@/components/back-to-projects";
 import { motion } from "framer-motion";
 
 export default function ContactSection()
@@ -43,7 +44,7 @@ export default function ContactSection()
                       />
                     </div>
                 </motion.div>
-                
+                <BackToProjects />
             </div>
           </section>
         )

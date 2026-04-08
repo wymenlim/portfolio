@@ -1,6 +1,7 @@
 "use client";
 import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
+import BackToProjects from "@/components/back-to-projects";
 import { motion } from "framer-motion";
 
 export default function ProjectsSection()
@@ -34,9 +35,9 @@ export default function ProjectsSection()
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: 0.15 }}
                 className="flex items-center justify-center"
-            >
-                <div className="flex h-150 w-225 mt-6">
-                    <ImageCarouselUploader
+                >
+                    <div className="flex h-150 w-225 mt-6">
+                        <ImageCarouselUploader
                       images={["/cloud-home.png", "/cloud-swipe.png", "/cloud-event.png","/cloud-create.png","/cloud-chat.png"]}
                       captions={[
                         "Home page for users",
@@ -48,7 +49,7 @@ export default function ProjectsSection()
                     />
                 </div>
             </motion.div>
-            
+            <BackToProjects />
         </div>
       </section>
     )
