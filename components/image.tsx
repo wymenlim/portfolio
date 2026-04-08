@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 type ImageCarouselProps = {
@@ -8,12 +8,52 @@ type ImageCarouselProps = {
   captions?: string[];
 };
 
+const SLIDE_IMAGE_SIZES = "(max-width: 768px) calc(100vw - 5rem), 1152px";
+
+function isVideoFile(src: string) {
+  return /\.(mp4|webm|ogg|mov)$/i.test(src);
+}
+
+function isGifFile(src: string) {
+  return src.toLowerCase().endsWith(".gif");
+}
+
+function preloadSlide(src: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  if (isVideoFile(src)) {
+    const video = document.createElement("video");
+    video.preload = "metadata";
+    video.src = src;
+    video.load();
+    return;
+  }
+
+  const image = new window.Image();
+  image.decoding = "async";
+  image.src = src;
+}
+
 export default function ImageCarousel({ images, captions }: ImageCarouselProps) {
   const [index, setIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const currentImage = images[index];
-  const isGif = currentImage.toLowerCase().endsWith(".gif");
-  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(currentImage);
+  const isGif = isGifFile(currentImage);
+  const isVideo = isVideoFile(currentImage);
+
+  useEffect(() => {
+    if (images.length < 2) {
+      return;
+    }
+
+    const nextIndex = (index + 1) % images.length;
+    const prevIndex = (index - 1 + images.length) % images.length;
+
+    preloadSlide(images[nextIndex]);
+    preloadSlide(images[prevIndex]);
+  }, [images, index]);
 
   function next() {
     setIndex((i) => (i + 1) % images.length);
@@ -61,14 +101,8 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
               className="h-full w-full object-contain"
               controls
               playsInline
-              preload="metadata"
+              preload="auto"
               aria-label={`Video ${index + 1}`}
-            />
-          ) : isGif ? (
-            <img
-              src={currentImage}
-              alt={`Image ${index + 1}`}
-              className="h-full w-full object-contain"
             />
           ) : (
             <Image
@@ -76,7 +110,10 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
               alt={`Image ${index + 1}`}
               fill
               className="object-contain"
-              priority
+              sizes={SLIDE_IMAGE_SIZES}
+              quality={80}
+              unoptimized={isGif}
+              priority={index === 0}
             />
           )}
         </div>
@@ -130,18 +167,15 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
                 preload="metadata"
                 autoPlay
               />
-            ) : isGif ? (
-              <img
-                src={currentImage}
-                alt={`Image ${index + 1}`}
-                className="h-full w-full object-contain"
-              />
             ) : (
               <Image
                 src={currentImage}
                 alt={`Image ${index + 1}`}
                 fill
                 className="object-contain"
+                sizes={SLIDE_IMAGE_SIZES}
+                quality={80}
+                unoptimized={isGif}
                 priority
               />
             )}

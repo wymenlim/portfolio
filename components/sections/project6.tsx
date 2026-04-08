@@ -3,7 +3,7 @@ import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
 import { motion } from "framer-motion";
 
-export default function Projects6()
+export default function Project6()
 {
     return(
         <section id="2" className="min-h-[70vh] bg-slate-900/50 ">
