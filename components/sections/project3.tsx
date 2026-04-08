@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ContactSection()
 {
     return(
-            <section id="4" className="min-h-[70vh] bg-slate-900/50 ">
+            <section id="project-smart-waste" className="min-h-[70vh] scroll-mt-28 bg-slate-900/50 ">
             <div className="px-10 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

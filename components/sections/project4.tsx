@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Project4()
 {
     return(
-            <section id="5" className="min-h-[70vh] bg-black ">
+            <section id="project-gamified-feedback" className="min-h-[70vh] scroll-mt-28 bg-black ">
             <div className="px-10 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

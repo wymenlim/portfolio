@@ -1,5 +1,4 @@
 import Header from "@/components/header";
-import NavBar from "@/components/NavBar";
 import {
   ProjectsSection,
   ExpSection,
@@ -18,7 +17,6 @@ export default function Home() {
     <main>
       <Header name="Wymen Lim" title="Computer Science Student"email="wymenlsr@gmail.com"
   linkedinUrl="https://www.linkedin.com/in/wymen-lim-431542217" resumeUrl="/Resume.pdf"></Header>
-      <NavBar></NavBar>
       <Hero />
       <Skills />
       <ProjIntro />

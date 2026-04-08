@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Project6()
 {
     return(
-        <section id="2" className="min-h-[70vh] bg-slate-900/50 ">
+        <section id="project-los-nlos" className="min-h-[70vh] scroll-mt-28 bg-slate-900/50 ">
         <div className="px-10 py-20">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
