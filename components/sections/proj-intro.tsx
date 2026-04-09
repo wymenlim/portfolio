@@ -22,7 +22,7 @@ const projects: ProjectLink[] = [
     title: "Dont Say Bojio",
     description:
       "An accessible event discovery app designed to help elderly users connect with their community.",
-    tech: ["Flask", "PostgreSQL", "AWS"],
+    tech: ["Cloud-Native","Docker", "AWS"],
     href: "#project-dont-say-bojio",
   },
   {
@@ -36,21 +36,21 @@ const projects: ProjectLink[] = [
     title: "Smart Waste Management",
     description:
       "IoT-enabled waste monitoring with overflow sensing, contactless interaction, and MQTT-based updates.",
-    tech: ["IoT", "MQTT", "Embedded Systems"],
+    tech: ["IoT", "Embedded Systems"],
     href: "#project-smart-waste",
   },
   {
     title: "Gamified Feedback App",
     description:
       "A narrative-driven survey experience built to improve response quality and completion rates.",
-    tech: ["Next.js", "Supabase", "Scrum"],
+    tech: ["Agile Development", "Professinal Software Development"],
     href: "#project-gamified-feedback",
   },
   {
-    title: "LOS/NLOS Predictor",
+    title: "LOS/NLOS Classifier and Regressor",
     description:
       "A machine learning pipeline for UWB signal classification and time-of-flight distance prediction.",
-    tech: ["scikit-learn", "Pandas", "NumPy"],
+    tech: ["Machine Learning", "Data Analysis"],
     href: "#project-los-nlos",
   },
 ];
