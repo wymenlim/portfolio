@@ -7,7 +7,7 @@ export default function ParticlesBackground() {
       className="fixed inset-0 z-0"
       particleCount={150}
       particleSpread={10}
-      speed={0.05}
+      speed={0.03}
       particleColors={["#ffffff", "#ffffff", "#ffffff"]}
       alphaParticles
       particleBaseSize={100}
