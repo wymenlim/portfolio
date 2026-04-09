@@ -2,22 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Code2, Terminal } from "lucide-react";
-import Particles from "@/components/Particles";
 
 const HeroSection = () => {
   return (
-    <section id="0" className="relative min-h-[70vh] h-[70vh] flex items-center justify-center px-6 py-20 overflow-hidden">
-      <Particles
-        className="z-0"
-        particleCount={150}
-        particleSpread={10}
-        speed={0.1}
-        particleColors={["#ffffff", "#ffffff", "#ffffff"]}
-        alphaParticles
-        particleBaseSize={160}
-        cameraDistance={20}
-      />
-      <div className="relative z-10 max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+    <section id="0" className="min-h-[70vh] flex items-center justify-center px-6 py-20">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Left - Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

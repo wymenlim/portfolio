@@ -10,10 +10,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
   return (
     <section
       id={project.id}
-      className={cn(
-        "min-h-[70vh] scroll-mt-28",
-        project.bg === "dark" ? "bg-slate-900/50" : "bg-black"
-      )}
+      className={cn("min-h-[70vh] scroll-mt-28", project.bg === "dark" && "bg-slate-900/50")}
     >
       <div className="px-10 py-20">
         <motion.div
