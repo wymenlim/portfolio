@@ -28,6 +28,10 @@ function preloadSlide(src: string) {
   }
 
   if (isHtmlFile(src)) {
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = src;
+    document.head.appendChild(link);
     return;
   }
 
@@ -52,6 +56,14 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
   const isVideo = isVideoFile(currentImage);
   const isHtml = isHtmlFile(currentImage);
 
+  // Preload all slides on mount
+  useEffect(() => {
+    images.forEach((src, i) => {
+      if (i !== 0) preloadSlide(src);
+    });
+  }, [images]);
+
+  // Preload adjacent slides on navigation
   useEffect(() => {
     if (images.length < 2) {
       return;
