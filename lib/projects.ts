@@ -50,6 +50,26 @@ export const projects: Project[] = [
     bg: "dark",
   },
   {
+    id: "project-los-nlos",
+    title: "LOS/NLOS Classification and Time-of-Flight Predictor ",
+    descriptions: [
+      "Developed an end-to-end machine learning pipeline for ultra-wideband indoor positioning that classifies LOS and NLOS signal conditions and predicts path distances from channel impulse response data.",
+    ],
+    tags: [
+      ["scikit-learn", "NumPy", "Pandas"],
+      ["Data Analysis", "Machine Learning"],
+    ],
+    images: [
+      "/ML.html",
+      "/ML-pipeline.html"
+    ],
+    captions: [
+      "Overview of the UWB LOS/NLOS classification and distance estimation project",
+      "End-to-end workflow from raw UWB data to saved model artifacts",
+    ],
+    bg: "darker",
+  },
+  {
     id: "project-flight-path",
     title: "Flight Path Visualisation Web App",
     descriptions: [
@@ -62,7 +82,7 @@ export const projects: Project[] = [
       ["Dynamic Programming"],
     ],
     images: ["/flight-1.jpeg", "/flight-2.jpeg", "/flight-3.jpeg", "/flight4.jpeg"],
-    bg: "darker",
+    bg: "dark",
   },
   {
     id: "project-smart-waste",
@@ -81,7 +101,7 @@ export const projects: Project[] = [
       "Visual representation of the project arhitecture",
       "Admin dashboard that shows the status of the bin",
     ],
-    bg: "dark",
+    bg: "darker",
   },
   {
     id: "project-gamified-feedback",
@@ -100,26 +120,7 @@ export const projects: Project[] = [
       "Example of tasks that users would have to complete before attempting the feedback form",
       "Example of a question in the feedback form",
     ],
-    bg: "darker",
-  },
-  {
-    id: "project-los-nlos",
-    title: "LOS/NLOS Classification and Time-of-Flight Predictor ",
-    descriptions: [
-      "Developed an end-to-end machine learning pipeline for ultra-wideband indoor positioning that classifies LOS and NLOS signal conditions and predicts path distances from channel impulse response data.",
-    ],
-    tags: [
-      ["scikit-learn", "NumPy", "Pandas"],
-      ["Data Analysis", "Machine Learning"],
-    ],
-    images: [
-      "/ML.html",
-      "/ML-pipeline.html"
-    ],
-    captions: [
-      "Overview of the UWB LOS/NLOS classification and distance estimation project",
-      "End-to-end workflow from raw UWB data to saved model artifacts",
-    ],
     bg: "dark",
   },
+  
 ];
