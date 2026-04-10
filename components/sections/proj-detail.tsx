@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
+import LazyMount from "@/components/lazy-mount";
 import BackToProjects from "@/components/back-to-projects";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/projects";
@@ -39,12 +40,12 @@ export default function ProjectDetail({ project }: { project: Project }) {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex items-center justify-center"
         >
-          <div className="flex h-150 w-225 mt-6">
+          <LazyMount className="flex h-150 w-225 mt-6">
             <ImageCarouselUploader
               images={project.images}
               captions={project.captions}
             />
-          </div>
+          </LazyMount>
         </motion.div>
 
         <BackToProjects />

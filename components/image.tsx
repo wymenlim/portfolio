@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { getMLSlide } from "@/components/ml-slides";
 
 type ImageCarouselProps = {
   images: string[];
@@ -28,10 +29,6 @@ function preloadSlide(src: string) {
   }
 
   if (isHtmlFile(src)) {
-    const link = document.createElement("link");
-    link.rel = "prefetch";
-    link.href = src;
-    document.head.appendChild(link);
     return;
   }
 
@@ -126,11 +123,20 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
               aria-label={`Video ${index + 1}`}
             />
           ) : isHtml ? (
-            <iframe
-              src={currentImage}
-              className="h-full w-full rounded-lg border border-white/10"
-              title={`HTML slide ${index + 1}`}
-            />
+            (() => {
+              const MLSlide = getMLSlide(currentImage);
+              return MLSlide ? (
+                <div className="h-full w-full rounded-lg border border-white/10 overflow-hidden">
+                  <MLSlide />
+                </div>
+              ) : (
+                <iframe
+                  src={currentImage}
+                  className="h-full w-full rounded-lg border border-white/10"
+                  title={`HTML slide ${index + 1}`}
+                />
+              );
+            })()
           ) : (
             <Image
               src={currentImage}
