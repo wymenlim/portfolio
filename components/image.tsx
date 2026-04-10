@@ -18,8 +18,16 @@ function isGifFile(src: string) {
   return src.toLowerCase().endsWith(".gif");
 }
 
+function isHtmlFile(src: string) {
+  return src.toLowerCase().endsWith(".html");
+}
+
 function preloadSlide(src: string) {
   if (typeof window === "undefined") {
+    return;
+  }
+
+  if (isHtmlFile(src)) {
     return;
   }
 
@@ -42,6 +50,7 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
   const currentImage = images[index];
   const isGif = isGifFile(currentImage);
   const isVideo = isVideoFile(currentImage);
+  const isHtml = isHtmlFile(currentImage);
 
   useEffect(() => {
     if (images.length < 2) {
@@ -82,15 +91,15 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
         <div
           className="relative h-full w-full max-w-4xl"
           onClick={() => {
-            if (!isVideo) {
+            if (!isVideo && !isHtml) {
               setIsExpanded(true);
             }
           }}
-          role={isVideo ? undefined : "button"}
-          tabIndex={isVideo ? -1 : 0}
-          aria-label={isVideo ? "Media" : "Expand media"}
+          role={isVideo || isHtml ? undefined : "button"}
+          tabIndex={isVideo || isHtml ? -1 : 0}
+          aria-label={isVideo || isHtml ? "Media" : "Expand media"}
           onKeyDown={(event) => {
-            if (!isVideo && (event.key === "Enter" || event.key === " ")) {
+            if (!isVideo && !isHtml && (event.key === "Enter" || event.key === " ")) {
               setIsExpanded(true);
             }
           }}
@@ -103,6 +112,12 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
               playsInline
               preload="auto"
               aria-label={`Video ${index + 1}`}
+            />
+          ) : isHtml ? (
+            <iframe
+              src={currentImage}
+              className="h-full w-full rounded-lg border border-white/10"
+              title={`HTML slide ${index + 1}`}
             />
           ) : (
             <Image

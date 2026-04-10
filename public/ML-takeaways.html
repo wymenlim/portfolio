@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UWB ML Explorer - Takeaways</title>
+<link rel="stylesheet" href="/ml-explorer.css">
+</head>
+<body>
+<div class="shell">
+  <div class="main">
+    <div class="topbar">
+      <span class="topbar-cur">Takeaways</span>
+      <span class="topbar-sep">›</span>
+      <span class="topbar-sub">Design decisions and technical highlights</span>
+    </div>
+
+    <main class="content">
+      <div class="tk-list">
+        <div class="tk-item"><div class="tk-n">1</div><div><div class="tk-t">Two-stage pipeline design</div><div class="tk-d">Classifying the signal as LOS or NLOS first gives the regressor cleaner, structured input - improving distance accuracy rather than asking one model to solve both problems simultaneously.</div></div></div>
+        <div class="tk-item"><div class="tk-n">2</div><div><div class="tk-t">Ensemble methods improve robustness</div><div class="tk-d">Stacking and voting ensembles combine RF, Gradient Boosting, XGBoost, and CatBoost. Ensembles reduce variance and tend to generalise better on noisy UWB multipath data.</div></div></div>
+        <div class="tk-item"><div class="tk-n">3</div><div><div class="tk-t">Preprocessing is critical for signal data</div><div class="tk-d">UWB measurements carry multipath noise and outliers. Feature scaling, PCA, and outlier detection are applied before any model sees the data, preventing garbage-in-garbage-out outcomes.</div></div></div>
+        <div class="tk-item"><div class="tk-n">4</div><div><div class="tk-t">Notebook-driven reproducibility</div><div class="tk-d">Every step - data loading to model serialization - is documented in Jupyter. Combined with saved artifacts, the workflow is easy to reproduce, extend, and share with collaborators.</div></div></div>
+        <div class="tk-item"><div class="tk-n">5</div><div><div class="tk-t">scikit-learn as the backbone</div><div class="tk-d">A unified API across all preprocessors and models makes it simple to build pipelines, swap estimators, and run grid-search cross-validation consistently throughout the project.</div></div></div>
+        <div class="tk-item"><div class="tk-n">6</div><div><div class="tk-t">Histogram-based boosting for speed</div><div class="tk-d">HistGradientBoosting bins continuous features before splitting - significantly faster on large datasets than standard gradient boosting while retaining comparable accuracy.</div></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

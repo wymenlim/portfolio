@@ -112,9 +112,13 @@ export const projects: Project[] = [
       ["scikit-learn", "NumPy", "Pandas"],
       ["Data Analysis", "Machine Learning"],
     ],
-    images: ["/ML-pipeline.png"],
+    images: [
+      "/ML.html",
+      "/ML-pipeline.html"
+    ],
     captions: [
-      "Machine learning pipeline for LOS/NLOS classification and Time-of-Flight prediction",
+      "Overview of the UWB LOS/NLOS classification and distance estimation project",
+      "End-to-end workflow from raw UWB data to saved model artifacts",
     ],
     bg: "dark",
   },
