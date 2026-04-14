@@ -44,7 +44,7 @@ const skillCategories: SkillCategory[] = [
     title: "Machine Learning & AI",
     icon: <Globe className="w-5 h-5" />,
     skills: [
-      { name: "Scikit-learn)", familiarity: "familiar" },
+      { name: "Scikit-learn", familiarity: "familiar" },
       { name: "Data Preprocessing", familiarity: "familiar" },
       { name: "Pandas & NumPy", familiarity: "familiar" },
       { name: "Model Evaluation", familiarity: "familiar" },
