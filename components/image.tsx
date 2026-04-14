@@ -48,6 +48,7 @@ function preloadSlide(src: string) {
 export default function ImageCarousel({ images, captions }: ImageCarouselProps) {
   const [index, setIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const currentImage = images[index];
   const isGif = isGifFile(currentImage);
   const isVideo = isVideoFile(currentImage);
@@ -142,11 +143,18 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
               src={currentImage}
               alt={`Image ${index + 1}`}
               fill
-              className="object-contain"
+              className={`object-contain transition-all duration-500 ${
+                loadedImages.has(currentImage)
+                  ? "scale-100 blur-0"
+                  : "scale-105 blur-md"
+              }`}
               sizes={SLIDE_IMAGE_SIZES}
               quality={80}
               unoptimized={isGif}
               priority={index === 0}
+              onLoad={() =>
+                setLoadedImages((prev) => new Set(prev).add(currentImage))
+              }
             />
           )}
         </div>
@@ -205,11 +213,18 @@ export default function ImageCarousel({ images, captions }: ImageCarouselProps) 
                 src={currentImage}
                 alt={`Image ${index + 1}`}
                 fill
-                className="object-contain"
+                className={`object-contain transition-all duration-500 ${
+                  loadedImages.has(currentImage)
+                    ? "scale-100 blur-0"
+                    : "scale-105 blur-md"
+                }`}
                 sizes={SLIDE_IMAGE_SIZES}
                 quality={80}
                 unoptimized={isGif}
                 priority
+                onLoad={() =>
+                  setLoadedImages((prev) => new Set(prev).add(currentImage))
+                }
               />
             )}
           </div>
