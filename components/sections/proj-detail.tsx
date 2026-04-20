@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Tag from "@/components/tag";
 import ImageCarouselUploader from "@/components/image";
 import LazyMount from "@/components/lazy-mount";
-import BackToProjects from "@/components/back-to-projects";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/projects";
 
@@ -47,8 +46,6 @@ export default function ProjectDetail({ project }: { project: Project }) {
             />
           </LazyMount>
         </motion.div>
-
-        <BackToProjects />
       </div>
     </section>
   );

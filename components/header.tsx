@@ -11,10 +11,15 @@ const Header = ({ name, title, email, linkedinUrl, resumeUrl }: HeaderProps) => 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-white/10 backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <div>
-          <h1 className="text-xl font-bold text-white tracking-tight">{name}</h1>
+        <a
+          href="#projects"
+          className="block transition hover:-translate-y-0.5"
+        >
+          <h1 className="text-xl font-bold tracking-tight text-white transition hover:text-white/80">
+            {name}
+          </h1>
           <p className="text-sm text-white/70">{title}</p>
-        </div>
+        </a>
         <nav className="flex items-center gap-2">
           {email && (
             <a
